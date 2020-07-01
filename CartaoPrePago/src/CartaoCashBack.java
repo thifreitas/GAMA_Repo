@@ -19,6 +19,9 @@ public class CartaoCashBack extends CartaoPrePago {
 	}
 	
 	public boolean Comprar (double valor) {
+		if (valor < 0 ) {
+			throw new CardException("Valor invalido para efetuar compra!");
+		}
 		if (valor <= this.saldo && tipo == 0) {
 			this.saldo = this.saldo - valor;
 			this.saldo = this.saldo + (valor * 0.08);

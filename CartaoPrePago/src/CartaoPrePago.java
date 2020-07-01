@@ -46,10 +46,16 @@ public class CartaoPrePago {
 	}
 	
 	public void adicionarCredito(double valor) {
+		if (valor <= 0 ) {
+			throw new CardException("Valor nao permitido!");
+		}
 		this.saldo = valor;
 	}
 	
 	public boolean Comprar (double valor) {
+		if (valor <= 0) {
+			throw new CardException("Valor nao pode ser inferior ao saldo!");
+		}
 		if (valor <= this.saldo) {
 			this.saldo = this.saldo - valor;
 			System.out.println("OK!");
