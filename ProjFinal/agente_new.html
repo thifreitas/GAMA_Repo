@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Informações do Parceiro</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agente Financeiro</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="agente.css">
+    <script type="text/javascript" src="agente.js"></script>
+    <script src="https://www.gstatic.com/charts/loader.js"></script>
+    <script>
+    google.charts.load('current', {packages: ['corechart']});
+    google.charts.setOnLoadCallback(drawChart);
+    </script>
+</head>
+<body onload="verificaUsuario()">
+    <div id="wrapper">
+        <div id="header">
+            <p>DashCard System</p>
+        </div>
+        <button class="btn btn-primary justify-content-center align-items-center" type="button" id="botao" onclick="drawChart()">
+            <h8 class="text-center">
+                Grafico
+            </h8>
+        </button>
+        <button class="btn btn-primary justify-content-center align-items-center" type="button" id="botao" onclick="drawChart()">
+            <h8 class="text-center">
+                Logout
+            </h8>
+        </button>
+        <div id="agente">
+        </div>
+        <div id="piechart">        
+        </div>
+    
+    
+        <div id="footer">
+            <p>SC Coders</p>
+        </div>
+    </div>
+</body>
+</html>
